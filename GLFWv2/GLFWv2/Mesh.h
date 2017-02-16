@@ -19,6 +19,7 @@ public:
 		this->pos = pos;
 		this->texCoord = texCoords;
 	}
+	Vertex() {}
 	inline glm::vec3* getPos() {	return &pos; }
 	inline glm::vec2* getTexCoord()	{ return &texCoord; }
 	inline void setPos(glm::vec3& newPos) { pos = newPos; }
@@ -51,10 +52,9 @@ public:
 	void Update(Vertex* vertices);
 	void Buffer();
 	void UnBuffer();
-	glm::vec3* GetPos();
-	GLuint getVBpos() {
-		return m_vertexArrayBuffers[POSITION_VB];
-	}
+	glm::vec3* getPos(){ return &positions[0]; }
+	glm::vec2* getTex() { return &texCoords[0]; }
+	GLuint getVBpos() { return m_vertexArrayBuffers[POSITION_VB]; }
 };
 
 #endif MESH_H

@@ -15,6 +15,7 @@ static void Pause(Display* display)
 		if ((*display).shouldClose()) return;
 	}
 	_sleep(200);
+	std::cout << "Unpaused" << std::endl;
 	glfwPollEvents();
 	glfwSetTime(time);
 }

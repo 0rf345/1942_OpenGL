@@ -12,6 +12,6 @@
 #include "Input.h"
 #include "Globals.h"
 #include "Animate.h"
-#include <SFML/Audio.hpp>
-#include <iomanip>
-#include <cmath>
+#include <SFML\Audio.hpp>
+#include "Player.h"
+#include "Action.h "

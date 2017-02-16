@@ -12,7 +12,7 @@ Display::Display(int width, int height)
 		exit(EXIT_FAILURE);
 	}
 	glfwMakeContextCurrent(window);
-	glfwSwapInterval(1);
+	glfwSwapInterval(0);
 }
 
 Display::~Display()
